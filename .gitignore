@@ -1,0 +1,15 @@
+# Operating System artifacts
+.DS_Store
+Thumbs.db
+
+# Editor / IDE settings
+.vscode/
+.idea/
+
+# Environment files and credentials
+.env
+*.local
+
+# Node / dependency artifacts (for later backend milestones)
+node_modules/
+dist/
