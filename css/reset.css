@@ -1,0 +1,54 @@
+/* Reset CSS */
+/* This CSS file is used to reset the default styles of HTML elements to ensure consistency across different browsers. */
+
+/* Resetting margins, paddings, and box-sizing for all elements */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Preventing text scaling in landscape mode on mobile devices */
+html {
+    -webkit-text-size-adjust: none; /* Prevent font scaling in landscape while allowing user zoom */
+    text-size-adjust: none; 
+    font-size: 100%;
+}
+/*Ensure that the body takes at least the full viewport height and set a comfortable line height for readability */
+body {
+    min-height: 100vh; /* Ensure the body takes at least the full viewport height */
+    line-height: 1.5; /* Set a comfortable line height for readability */
+    -webkit-font-smoothing: antialiased; /* Improve font rendering on WebKit browsers */
+}
+/* Remove default list styles for unordered and ordered lists */
+ul,
+ol {
+    list-style: none; /* Remove default list styles */
+}
+/* Make media elements responsive and block-level for better layout control */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block; /* Ensure media elements are block-level for better layout control */
+    max-width: 100%; /* Make media elements responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+/* Remove default styles for form elements and ensure they inherit font styles */
+input,
+button,
+textarea,
+select {
+    font: inherit; /* Inherit font styles for form elements */
+    border: none; /* Remove default borders */
+    background: none; /* Remove default background */
+    outline: none; /* Remove default outline */
+}
+/* Remove default underline from links and inherit color for links */
+a {
+    text-decoration: none; /* Remove default underline from links */
+    color: inherit; /* Inherit color for links */
+}
