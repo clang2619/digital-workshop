@@ -1,0 +1,90 @@
+/*Application Viewport Shell*/
+body {
+    /*Establish full viewport boundaires*/
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    /*baseline colours from tokens*/
+    background-color: var(--bg-canvas);
+    color: var(--text-main);
+    font-family: var(--font-family-sans);
+    /*Define Macro 2D Layout*/
+    display: grid;
+    grid-template-rows: var(--header-height) 1fr auto; /* Header and main content rows */
+    grid-template-columns: var(--sidebar-width) minmax(0, 1fr); /* Sidebar and main content columns */
+    grid-template-areas: 
+        "header header"
+        "nav main"
+        "footer footer";
+}
+/*Structural region assignments*/
+header {
+    grid-area: header;
+    height: var(--header-height);
+    background-color: var(--bg-surface);
+    display: flex;
+    align-items: center;
+    padding: 0var(--space-lg);
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border-subtle);
+    z-index: 10; /* Ensure header is above other content */
+}
+/*Sidebar navigation region*/
+nav {
+    grid-area: nav;
+    width: var(--sidebar-width);
+    background-color: var(--bg-surface);
+    border-right: 1px solid var(--border-subtle);
+    overflow-y: auto; /* Allow vertical scrolling if content exceeds height */
+    padding: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+
+}
+/*The Active Tool Stage (Dynamic Workbench)*/
+main#workbench {
+    grid-area: main;
+    background-color: var(--bg-surface);
+    overflow-y: auto; /* Allow vertical scrolling if content exceeds height */
+    padding: var(--space-xl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg); /* Space between child elements */
+}
+
+/*Footer region for status and controls*/
+footer {
+    grid-area: footer;
+    height: var(--spacing-lg);
+    background-color: var(--bg-surface);
+    border-top: 1px solid var(--border-subtle);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-xs) var(--space-lg);
+    font-size: var(--font-size-xs);
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-subtle);
+}   
+
+/*Responsive adjustments for smaller screens*/
+@media (max-width: 768px) {
+    body {
+        height: auto; /* Allow body height to adjust based on content */
+        min-height: 100vh; /* Ensure minimum height is full viewport */
+        overflow-y: auto; /* Enable vertical scrolling */
+        grid-template-rows: auto auto 1fr auto; /* Header and main content rows */
+        grid-template-columns: 1fr; /* Single column layout */
+        grid-template-areas: 
+            "header"
+            "nav"
+            "main"
+            "footer";
+    }
+
+    nav {
+      
+        border-right: none; /* Remove right border */
+        border-bottom: 1px solid var(--border-subtle); /* Add bottom border */
+    }
+}
