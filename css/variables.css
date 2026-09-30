@@ -1,0 +1,50 @@
+:root {
+/* COLOUR TOKENS (DARK MODE) */
+    /*Background layers darkest to lightest*/
+    --bg-canvas: #0f172a; /* Deep background layer */
+    --bg-surface: #1e293b; /* Surface layer for cards, modals, etc. */
+    --bg-surface-hover: #334155; /* Hover state for surface layer */
+
+    /*Text Hierarchy*/
+    --text-main: #f8fafc; /* High-contrast headings and body text */
+    --text-muted: #94a3b8; /* Muted text for secondary information, labels, etc. */
+
+    /*Accent and Interactive Elements*/
+    --accent: #38bdf8; /* Primary accent color for buttons, links, etc. */
+    --accent-glow: rgba(56, 189, 248, 0.15); /* Glow effect for accent elements */
+    --border-subtle: #334155; /* Subtle border color for dividers, inputs, etc. */
+    --status-success: #4ade80; /* Success state color for notifications, badges, etc. */
+    --status-danger: #f87171; /* Danger state color for errors, alerts, etc. */
+/* TYPOGRAPHY SCALE  */
+    /* NAtive system font stack- loads faster and is more readable on all devices */
+    --font-family-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-family-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    /* Font sizes for different text elements */
+    --font-size-xs: 0.75rem; /* Extra small text size */
+    --font-size-sm: 0.875rem; /* Small text size */
+    --font-size-base: 1rem; /* Base text size */
+    --font-size-lg: 1.25rem; /* Large text size */
+    --font-size-xl: 1.5rem; /* Extra large text size */
+    --font-size-2xl: 2rem; /* 2x large text size */
+    /*line Heights*/
+    --line-height-tight: 1.25; /* Tight line height for compact text */
+    --line-height-normal: 1.5; /* Normal line height for standard text */
+/*SPACING SCALE*/
+    --spacing-0: 0; /* No spacing */
+    --spacing-2xs: 0.25rem; /* Small spacing */
+    --spacing-xs: 0.5rem; /* Medium spacing */
+    --spacing-sm: 0.75rem; /* Large spacing */
+    --spacing-md: 1rem; /* Extra large spacing */
+    --spacing-lg: 1.5rem; /* Extra extra large spacing */
+    --spacing-xl: 2rem; /* Extra extra extra large spacing */
+    --spacing-2xl: 3rem; /* Extra extra extra extra large spacing */
+    /* Layout Geometry */
+    --sidebar-width: 260px; /* Width of the sidebar */
+    --header-height: 60px; /* Height of the header */
+    --radius-sm: 4px; /* Small border radius for rounded corners */
+    --radius-md: 8px; /* Medium border radius for rounded corners */
+    --radius-lg: 12px; /* Large border radius for rounded corners */
+    /*Transition Durations*/
+    --transition-fast: 150ms ease; /* Fast transition duration for quick animations */
+
+}
