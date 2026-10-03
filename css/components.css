@@ -129,16 +129,16 @@
 
 /* System status and notifications */
 .badge {
-    display: inline-flex
-    align-items: center;
-    padding: var(--space-2xs) var(--space-xs);
-    border-radius: var(--border-radius-sm);
-    font-size: var(--font-size-2xs);
-    font-family: var(--font-mono);
-    font-weight: 600;
-    color: var(--text-muted);
-    background-color: var(--bg-surface-hover);
-}   
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-2xs) var(--space-xs);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-xs);
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: var(--text-muted);
+  background-color: var(--bg-surface-hover);
+}
 
 .badge.success {
     color: var(--status-success);
