@@ -1,0 +1,170 @@
+/* Workbench Cards and Containers */
+
+.card {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--border-radius-md);
+    padding: var(--space-lg);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);   
+}
+
+.card-title {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--text-main);
+    margin-bottom: var(--space-sm);
+}
+
+.card-description {
+    font-size: var(--font-size-sm);
+    color: var(--text-muted);
+    margin-bottom: var(--space-md);
+    line-height: var(--line-height-normal);
+}
+
+/* Sidebar navigation links */
+
+.nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2xs);
+}
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--border-radius-sm);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    color: var(--text-muted);
+    text-decoration: none;
+    border-radius: var(--border-radius-sm);
+    transition: 
+        background-color var(--transition-fast),
+        color var(--transition-fast);
+    cursor: pointer;
+}
+
+/* Hover and Active States for Navigation Links */
+.nav-link:hover {
+    background-color: var(--bg-surface-hover);
+    color: var(--text-main);
+}
+
+/* Active state for navigation links */
+.nav-link.active {
+    background-color: var(--accent-glow);
+    color: var(--accent);
+    font-weight: 600;
+    border-left: 3px solid var(--accent);
+}
+
+/*keyboard focus state for accessibility */
+.nav-link:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-xs);
+    padding: var(--space-xs) var(--space-md);
+    border-radius: var(--border-radius-sm);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--text-main);
+    background-color: var(--bg-surface);
+    border: 1px solid transparent;
+    cursor: pointer;
+    user-select: none;
+    transition: 
+        background-color var(--transition-fast),
+        color var(--transition-fast),
+        box-shadow var(--transition-fast);
+}
+
+/*Primary button */
+.btn-primary {
+    background-color: var(--accent);
+    color: var(--bg-canvas);
+    border: 1px solid var(--accent);
+}
+
+.btn-primary:hover {
+   filter: brightness(1.1);
+}
+
+.btn-primary:active {
+    filter: scale(0.98);
+}
+
+/*Secondary button */
+.btn-outline {
+    background-color: transparent;
+    border-color: var(--border-subtle);
+    color: var(--text-main);
+}
+
+.btn-outline:hover {
+    background-color: var(--bg-surface-hover);
+    color: var(--text-main);
+}
+
+.btn-outline:active {
+    transform: scale(0.98);
+}
+
+.btn:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+/* System status and notifications */
+.badge {
+    display: inline-flex
+    align-items: center;
+    padding: var(--space-2xs) var(--space-xs);
+    border-radius: var(--border-radius-sm);
+    font-size: var(--font-size-2xs);
+    font-family: var(--font-mono);
+    font-weight: 600;
+    color: var(--text-muted);
+    background-color: var(--bg-surface-hover);
+}   
+
+.badge.success {
+    color: var(--status-success);
+    background-color: rgba(74, 222, 128, 0.1); /* Light green background for success */
+    border: 1px solid rgba(74, 222, 128, 0.3); /* Slightly darker border for success */
+}
+
+/* Stanardized form inputs for future interactive elements */
+.input-text,
+.textarea {
+    width: 100%;
+    padding: var(--space-sm) var(--space-md);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--border-radius-sm);
+    font-size: var(--font-size-sm);
+    font-family: var(--font-family-mono);
+    color: var(--text-main);
+    background-color: var(--bg-surface);
+    transition: 
+        border-color var(--transition-fast),
+        box-shadow var(--transition-fast);
+}
+
+.input-text:focus,
+.textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 1px var(--accent);
+}
